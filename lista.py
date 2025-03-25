@@ -45,3 +45,9 @@ def listar_favoritos():
     for c in sorted([c for c in agenda if c['fav']], key=lambda x: x['nome']):
         print(f"{c['nome']} - {c['tel']} ★")
 
+def main():
+    while (op := menu()) != '8':
+        {"1": adicionar, "2": listar, "3": buscar, "4": atualizar, "5": remover, "6": favoritar, "7": listar_favoritos}.get(op, lambda: print("Inválido"))()
+
+if __name__ == "__main__":
+    main()
