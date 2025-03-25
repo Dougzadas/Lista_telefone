@@ -41,3 +41,7 @@ def favoritar():
             c['fav'] = not c['fav']
             return
 
+def listar_favoritos():
+    for c in sorted([c for c in agenda if c['fav']], key=lambda x: x['nome']):
+        print(f"{c['nome']} - {c['tel']} ★")
+
