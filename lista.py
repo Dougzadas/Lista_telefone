@@ -31,3 +31,7 @@ def atualizar():
             c['tel'] = input("Novo telefone: ") or c['tel']
             return
 
+def remover():
+    global agenda
+    agenda = [c for c in agenda if c['nome'] != input("Nome: ")]
+
