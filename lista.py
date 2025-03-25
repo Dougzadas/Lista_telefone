@@ -19,3 +19,7 @@ def listar():
     for c in sorted(agenda, key=lambda x: x['nome']):
         print(f"{c['nome']} - {c['tel']} {'★' if c['fav'] else ''}")
 
+def buscar():
+    nome = input("Nome: ")
+    print(next((f"{c['nome']} - {c['tel']} {'★' if c['fav'] else ''}" for c in agenda if c['nome'] == nome), "Não encontrado"))
+
