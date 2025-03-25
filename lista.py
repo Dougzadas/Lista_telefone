@@ -15,3 +15,7 @@ def menu():
 def adicionar():
     agenda.append({"nome": input("Nome: "), "tel": input("Telefone: "), "fav": input("Favorito? (s/n): ") == 's'})
 
+def listar():
+    for c in sorted(agenda, key=lambda x: x['nome']):
+        print(f"{c['nome']} - {c['tel']} {'★' if c['fav'] else ''}")
+
