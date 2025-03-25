@@ -1,14 +1,17 @@
 agenda = []
 
-def exibir_menu():
-    print("AGENDA DE CONTATOS")
-    print("1. Adicionar contato")
-    print("2. Listar contatos")
-    print("3. Buscar contato")
-    print("4. Atualizar contato")
-    print("5. Remover contato")
-    print("6. Favoritar/Desfavoritar contato")
-    print("7. Listar contatos favoritos")
+def menu():
+    print("\nAGENDA")
+    print("1. Adicionar")
+    print("2. Listar")
+    print("3. Buscar")
+    print("4. Atualizar")
+    print("5. Remover")
+    print("6. Favoritar")
+    print("7. Listar favoritos")
     print("8. Sair")
-    return input("Escolha uma opção: ")
+    return input("Escolha: ")
+
+def adicionar():
+    agenda.append({"nome": input("Nome: "), "tel": input("Telefone: "), "fav": input("Favorito? (s/n): ") == 's'})
 
