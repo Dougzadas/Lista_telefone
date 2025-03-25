@@ -23,3 +23,11 @@ def buscar():
     nome = input("Nome: ")
     print(next((f"{c['nome']} - {c['tel']} {'★' if c['fav'] else ''}" for c in agenda if c['nome'] == nome), "Não encontrado"))
 
+def atualizar():
+    nome = input("Nome: ")
+    for c in agenda:
+        if c['nome'] == nome:
+            c['nome'] = input("Novo nome: ") or c['nome']
+            c['tel'] = input("Novo telefone: ") or c['tel']
+            return
+
