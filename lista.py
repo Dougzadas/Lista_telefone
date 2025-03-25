@@ -2,7 +2,6 @@ import json
 
 agenda = []
 
-# Carregar dados do arquivo
 try:
     with open("agenda.json", "r") as f:
         agenda = json.load(f)
