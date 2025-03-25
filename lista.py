@@ -35,3 +35,9 @@ def remover():
     global agenda
     agenda = [c for c in agenda if c['nome'] != input("Nome: ")]
 
+def favoritar():
+    for c in agenda:
+        if c['nome'] == input("Nome: "):
+            c['fav'] = not c['fav']
+            return
+
